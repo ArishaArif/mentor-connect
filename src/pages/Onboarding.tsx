@@ -26,8 +26,18 @@ import {
   Briefcase,
   Award,
   Heart,
-  Linkedin
+  Linkedin,
+  FolderGit2,
+  Code2,
+  Trophy,
+  Quote
 } from 'lucide-react';
+import { WorkExperienceForm } from '@/components/portfolio/WorkExperienceForm';
+import { ProjectsForm } from '@/components/portfolio/ProjectsForm';
+import { TechStackForm } from '@/components/portfolio/TechStackForm';
+import { AchievementsForm } from '@/components/portfolio/AchievementsForm';
+import { PortfolioBioForm } from '@/components/portfolio/PortfolioBioForm';
+import type { WorkExperience, Project, Achievement, TechStack } from '@/types/portfolio';
 
 const STEPS = [
   { id: 'basic', icon: User, label: 'Basic Info' },
@@ -38,7 +48,12 @@ const STEPS = [
 ];
 
 const MENTOR_STEPS = [
-  ...STEPS,
+  { id: 'bio', icon: Quote, label: 'Bio' },
+  { id: 'basic', icon: User, label: 'Basic Info' },
+  { id: 'experience', icon: Briefcase, label: 'Experience' },
+  { id: 'projects', icon: FolderGit2, label: 'Projects' },
+  { id: 'techstack', icon: Code2, label: 'Tech Stack' },
+  { id: 'achievements', icon: Trophy, label: 'Achievements' },
   { id: 'mentoring', icon: Sparkles, label: 'Mentoring' },
 ];
 
@@ -111,6 +126,21 @@ export default function Onboarding() {
   const [newSkill, setNewSkill] = useState('');
   const [interests, setInterests] = useState<string[]>([]);
   const [expertiseAreas, setExpertiseAreas] = useState<string[]>([]);
+  
+  // Mentor portfolio states
+  const [workExperiences, setWorkExperiences] = useState<WorkExperience[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [achievements, setAchievements] = useState<Achievement[]>([]);
+  const [techStacks, setTechStacks] = useState<TechStack[]>([]);
+  const [headline, setHeadline] = useState('');
+  const [bio, setBio] = useState('');
+  const [socialLinks, setSocialLinks] = useState<{
+    linkedin?: string;
+    github?: string;
+    twitter?: string;
+    website?: string;
+    blog?: string;
+  }>({});
 
   const progress = ((currentStep + 1) / steps.length) * 100;
 
@@ -165,6 +195,15 @@ export default function Onboarding() {
     const stepId = steps[currentStep].id;
 
     switch (stepId) {
+      case 'bio':
+        return <PortfolioBioForm 
+          headline={headline}
+          setHeadline={setHeadline}
+          bio={bio}
+          setBio={setBio}
+          socialLinks={socialLinks}
+          setSocialLinks={setSocialLinks}
+        />;
       case 'basic':
         return <BasicInfoStep 
           formData={formData} 
@@ -179,6 +218,26 @@ export default function Onboarding() {
           formData={formData} 
           setFormData={setFormData}
           isMentor={isMentor}
+        />;
+      case 'experience':
+        return <WorkExperienceForm 
+          experiences={workExperiences} 
+          setExperiences={setWorkExperiences} 
+        />;
+      case 'projects':
+        return <ProjectsForm 
+          projects={projects} 
+          setProjects={setProjects} 
+        />;
+      case 'techstack':
+        return <TechStackForm 
+          techStacks={techStacks} 
+          setTechStacks={setTechStacks} 
+        />;
+      case 'achievements':
+        return <AchievementsForm 
+          achievements={achievements} 
+          setAchievements={setAchievements} 
         />;
       case 'skills':
         return <SkillsStep 
