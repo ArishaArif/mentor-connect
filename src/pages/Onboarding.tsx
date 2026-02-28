@@ -54,7 +54,7 @@ const MENTOR_STEPS = [
   { id: 'projects', icon: FolderGit2, label: 'Projects' },
   { id: 'techstack', icon: Code2, label: 'Tech Stack' },
   { id: 'achievements', icon: Trophy, label: 'Achievements' },
-  { id: 'mentoring', icon: Sparkles, label: 'Mentoring' },
+  { id: 'mentoring', icon: Sparkles, label: 'Guidance' },
 ];
 
 const DEPARTMENTS = [
@@ -266,7 +266,7 @@ export default function Onboarding() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-4">
-            <h1 className="font-display text-xl font-bold text-gradient">MentorMatch</h1>
+            <h1 className="font-display text-xl font-bold text-gradient">AlumniConnect</h1>
             <span className="text-sm text-muted-foreground">
               Step {currentStep + 1} of {steps.length}
             </span>
@@ -846,8 +846,8 @@ function MentoringStep({ formData, setFormData }: { formData: any; setFormData: 
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="font-display text-2xl font-bold mb-2">Mentoring Preferences</h2>
-        <p className="text-muted-foreground">Help us match you with the right mentees</p>
+        <h2 className="font-display text-2xl font-bold mb-2">Guidance Preferences</h2>
+        <p className="text-muted-foreground">Help us connect you with the right students</p>
       </div>
 
       <div className="space-y-6">
@@ -866,7 +866,7 @@ function MentoringStep({ formData, setFormData }: { formData: any; setFormData: 
         </div>
 
         <div className="space-y-3">
-          <Label>Preferred Mentee Age Group</Label>
+          <Label>Preferred Student Age Group</Label>
           <div className="flex flex-wrap gap-2">
             {['18-22', '23-27', '28-32', '33+'].map(age => (
               <Badge
@@ -898,7 +898,7 @@ function MentoringStep({ formData, setFormData }: { formData: any; setFormData: 
         </div>
 
         <div className="space-y-3">
-          <Label>What would you like to mentor in?</Label>
+          <Label>What would you like to guide in?</Label>
           <div className="flex flex-wrap gap-2">
             {['Career Guidance', 'Technical Skills', 'Interview Prep', 'Resume Review', 'Project Guidance', 'Industry Insights'].map(area => (
               <Badge

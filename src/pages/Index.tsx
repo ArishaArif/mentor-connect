@@ -25,7 +25,7 @@ export default function Index() {
         <div className="container max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="font-display text-2xl font-bold text-gradient">
-              MentorMatch
+              AlumniConnect
             </h1>
             <div className="flex items-center gap-3">
               <Button variant="ghost" onClick={() => navigate('/auth')}>
@@ -56,17 +56,17 @@ export default function Index() {
           >
             <Badge variant="secondary" className="mb-6 px-4 py-2">
               <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Mentorship Matching
+              AI-Powered Alumni Guidance
             </Badge>
             
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-              Find Your Perfect
-              <span className="text-gradient block">Career Mentor</span>
+              Get Guided by
+              <span className="text-gradient block">Experienced Alumni</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Connect with industry experts who've walked your path. 
-              Get personalized guidance to accelerate your career growth.
+              Connect with alumni who've walked your path. 
+              Get short-term guidance to kickstart your career.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -85,7 +85,7 @@ export default function Index() {
                 onClick={() => navigate('/auth')}
                 className="w-full sm:w-auto"
               >
-                Become a Mentor
+                Join as Alumni
               </Button>
             </div>
 
@@ -106,7 +106,7 @@ export default function Index() {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-success" />
-                <span className="text-sm">Verified Mentors</span>
+                <span className="text-sm">Verified Alumni</span>
               </div>
             </motion.div>
           </motion.div>
@@ -165,7 +165,7 @@ export default function Index() {
             <FeatureCard
               icon={Sparkles}
               title="Smart Matching"
-              description="AI-powered algorithm matches you with mentors based on your goals, skills, and interests"
+              description="AI-powered algorithm connects you with alumni based on your goals, skills, and interests"
               delay={0}
             />
             <FeatureCard
@@ -177,13 +177,13 @@ export default function Index() {
             <FeatureCard
               icon={MessageCircle}
               title="Real-time Chat"
-              description="Stay connected with your mentor through our built-in messaging system"
+              description="Stay connected with your alumni guide through our built-in messaging system"
               delay={0.2}
             />
             <FeatureCard
               icon={Award}
               title="Verified Profiles"
-              description="All mentors are verified professionals with proven track records"
+              description="All alumni are verified professionals with proven track records"
               delay={0.3}
             />
             <FeatureCard
@@ -229,13 +229,13 @@ export default function Index() {
             <StepCard
               number="2"
               title="Get Matched"
-              description="Browse through curated mentor recommendations. View their profiles, expertise, and reviews before connecting."
+              description="Browse through curated alumni recommendations. View their profiles, expertise, and reviews before connecting."
               delay={0.1}
             />
             <StepCard
               number="3"
               title="Start Growing"
-              description="Schedule sessions, chat with your mentor, and track your progress. Watch your career take off!"
+              description="Schedule quick sessions, chat with your alumni guide, and get the boost you need!"
               delay={0.2}
             />
           </div>
@@ -258,7 +258,7 @@ export default function Index() {
                 Ready to Start Your Journey?
               </h2>
               <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto">
-                Join thousands of professionals who've accelerated their careers with MentorMatch
+                Join thousands of professionals who've accelerated their careers with AlumniConnect
               </p>
               <Button 
                 variant="secondary" 
@@ -279,7 +279,7 @@ export default function Index() {
         <div className="container max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2026 MentorMatch. All rights reserved.
+              © 2026 AlumniConnect. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-foreground transition-colors">Privacy</a>

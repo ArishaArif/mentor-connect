@@ -58,14 +58,14 @@ const SAMPLE_MATCHES = [
 const UPCOMING_SESSIONS = [
   {
     id: '1',
-    mentorName: 'Sarah Chen',
+    alumniName: 'Sarah Chen',
     date: 'Tomorrow',
     time: '2:00 PM',
     topic: 'ML Career Path Discussion',
   },
   {
     id: '2',
-    mentorName: 'Michael Rodriguez',
+    alumniName: 'Michael Rodriguez',
     date: 'Wed, Jan 15',
     time: '4:30 PM',
     topic: 'System Design Interview Prep',
@@ -83,7 +83,7 @@ export default function Dashboard() {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <h1 className="font-display text-xl font-bold text-gradient">MentorMatch</h1>
+            <h1 className="font-display text-xl font-bold text-gradient">AlumniConnect</h1>
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="icon" className="relative">
                 <Bell className="w-5 h-5" />
@@ -115,12 +115,12 @@ export default function Dashboard() {
               Welcome back! 👋
             </h2>
             <p className="text-muted-foreground mt-1">
-              Ready to connect with mentors and grow your career?
+              Ready to connect with alumni and grow your career?
             </p>
           </div>
           <Button variant="hero" className="gap-2 self-start">
             <Sparkles className="w-4 h-4" />
-            Find Mentors
+            Find Alumni
           </Button>
         </motion.div>
 
@@ -215,7 +215,7 @@ export default function Dashboard() {
                       className="p-3 rounded-lg bg-muted/50 border border-border"
                     >
                       <div className="flex justify-between items-start mb-1">
-                        <span className="font-medium text-sm">{session.mentorName}</span>
+                        <span className="font-medium text-sm">{session.alumniName}</span>
                         <Badge variant="secondary" className="text-xs">
                           {session.date}
                         </Badge>
@@ -244,7 +244,7 @@ export default function Dashboard() {
                 <CardContent className="space-y-2">
                   <Button variant="outline" className="w-full justify-start gap-3">
                     <Search className="w-4 h-4" />
-                    Find a Mentor
+                    Find an Alumni
                   </Button>
                   <Button variant="outline" className="w-full justify-start gap-3">
                     <Calendar className="w-4 h-4" />

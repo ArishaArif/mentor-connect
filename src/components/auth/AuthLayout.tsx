@@ -21,10 +21,10 @@ export function AuthLayout({ children, title, subtitle }: AuthLayoutProps) {
             transition={{ duration: 0.6 }}
           >
             <h1 className="font-display text-5xl font-bold mb-4">
-              MentorMatch
+              AlumniConnect
             </h1>
             <p className="text-xl opacity-90 max-w-md leading-relaxed">
-              Connect with mentors who've walked your path. Build relationships that accelerate your career.
+              Connect with alumni who've been in your shoes. Get short-term guidance that makes a real difference.
             </p>
           </motion.div>
 
@@ -68,7 +68,7 @@ export function AuthLayout({ children, title, subtitle }: AuthLayoutProps) {
             {/* Mobile logo */}
             <div className="lg:hidden mb-8 text-center">
               <h1 className="font-display text-3xl font-bold text-gradient">
-                MentorMatch
+                AlumniConnect
               </h1>
             </div>
 
