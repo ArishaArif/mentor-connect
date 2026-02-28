@@ -58,12 +58,12 @@ export default function Auth() {
       case 'login':
         return {
           title: 'Welcome back',
-          subtitle: 'Sign in to continue your mentorship journey',
+          subtitle: 'Sign in to continue your alumni journey',
         };
       case 'signup':
         return {
           title: 'Create your account',
-          subtitle: 'Start connecting with mentors today',
+          subtitle: 'Start connecting with alumni today',
         };
       case 'forgot-password':
         return {
@@ -211,8 +211,8 @@ export default function Auth() {
                         selected={role === 'alumni' || role === 'mentor'}
                         onClick={() => setRole('alumni')}
                         emoji="🌟"
-                        label="Alumni/Mentor"
-                        description="Ready to guide others"
+                        label="Alumni Guide"
+                        description="Share your experience"
                       />
                     </div>
                   </div>
